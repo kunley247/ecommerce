@@ -79,12 +79,27 @@ WSGI_APPLICATION = 'ecommerce.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-DATABASES = {
+""" DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
+} """
+
+DATABASES = {
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'ecommerce',  # Use the value from the "DB Name" field
+        'USER': 'admin',
+        'PASSWORD': 'kunleY247++',
+        'HOST': 'database-1.cja4o6eiy2o3.eu-north-1.rds.amazonaws.com',
+        'PORT': '3306',
+        # 'OPTIONS': {
+        #     'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+        # },
+    }
 }
+
 
 
 # Password validation
